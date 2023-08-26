@@ -16,4 +16,5 @@ This is a simple React Native app that demonstrates Firebase Authentication inte
 - Node.js and npm installed
 - React Native development environment set up
 - Firebase account and project created
-
+<img src="https://github.com/s21sd/React--Native--Todo--APP/blob/master/SRC/img/sample1.jpg" width="500" height="1000" alt="Image Description">
+<img src="https://github.com/s21sd/React--Native--Todo--APP/blob/master/SRC/img/sample2.jpg" width="500" height="1000" alt="Image Description">
