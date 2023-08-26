@@ -8,6 +8,9 @@ const Stack = createNativeStackNavigator();
 const StackScreen = () => {
     return (
         <Stack.Navigator>
+
+
+
             <Stack.Screen
                 name="LoginScreen"
                 component={LoginScreen}
@@ -16,8 +19,6 @@ const StackScreen = () => {
                         headerShown: false,
                     }
                 }
-
-
             />
 
             <Stack.Screen
@@ -28,7 +29,6 @@ const StackScreen = () => {
                         headerShown: false,
                     }
                 } />
-
             <Stack.Screen
                 name="MainScreen"
                 component={MainSrceen}
@@ -37,6 +37,9 @@ const StackScreen = () => {
                         headerShown: false,
                     }
                 } />
+
+
+
         </Stack.Navigator>
 
     );

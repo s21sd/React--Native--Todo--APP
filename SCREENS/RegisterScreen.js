@@ -1,5 +1,5 @@
 import React from 'react'
-import { SafeAreaView, View, Text, Image, StatusBar, TextInput, ToastAndroid,TouchableOpacity, ScrollView } from 'react-native'
+import { SafeAreaView, View, Text, Image, StatusBar, TextInput, ToastAndroid, TouchableOpacity, ScrollView } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
@@ -70,21 +70,21 @@ const RegisterScreen = ({ navigation }) => {
 
                 <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 20 }}>
                     <TouchableOpacity>
-                        <AntDesign name="google" size={35} color="black" />
+                        <AntDesign name="google" size={35} color='#f5f3f0' />
                     </TouchableOpacity>
 
                     <TouchableOpacity>
-                        <Entypo name="facebook" size={35} color="black" />
+                        <Entypo name="facebook" size={35} color='#f5f3f0' />
                     </TouchableOpacity>
 
                     <TouchableOpacity>
-                        <AntDesign name="twitter" size={35} color="black" />
+                        <AntDesign name="twitter" size={35} color='#f5f3f0' />
                     </TouchableOpacity>
 
                 </View>
 
                 <View style={{ flexDirection: 'row', justifyContent: 'center', marginBottom: 20, marginTop: 30 }}>
-                    <Text>Already, registerd?</Text>
+                    <Text>Already, registered?</Text>
                     <TouchableOpacity onPress={() => navigation.goBack()}>
                         <Text style={{ color: '#ffffff', fontWeight: '700' }}>  Login</Text>
                     </TouchableOpacity>

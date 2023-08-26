@@ -1,4 +1,4 @@
-import React, {useState } from 'react'
+import React, { useState } from 'react'
 import { SafeAreaView, View, Text, Image, StatusBar, TextInput, TouchableOpacity, ToastAndroid } from 'react-native'
 import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
@@ -54,15 +54,15 @@ const LoginScreen = ({ navigation }) => {
 
         <View style={{ flexDirection: 'row', justifyContent: 'space-evenly', marginTop: 20 }}>
           <TouchableOpacity>
-            <AntDesign name="google" size={35} color="black" />
+            <AntDesign name="google" size={35} color='#f5f3f0' />
           </TouchableOpacity>
 
           <TouchableOpacity>
-            <Entypo name="facebook" size={35} color="black" />
+            <Entypo name="facebook" size={35} color='#f5f3f0' />
           </TouchableOpacity>
 
           <TouchableOpacity>
-            <AntDesign name="twitter" size={35} color="black" />
+            <AntDesign name="twitter" size={35} color='#f5f3f0' />
           </TouchableOpacity>
 
         </View>

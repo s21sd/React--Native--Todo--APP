@@ -3,7 +3,7 @@ import AuthStack from './SCREENS/AuthStack';
 
 const App = () => {
   return (
-      <AuthStack />
+    <AuthStack />
   );
 }
 export default App
