@@ -1,52 +1,77 @@
-import React, { useState } from 'react'
-import { View, Text, TouchableOpacity, } from 'react-native'
+import React from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
+import { Ionicons } from '@expo/vector-icons';
 const Tasks = (props) => {
-
     const { task, onDelete, completed, onToggle } = props;
 
     return (
-        <View style={{
-            backgroundColor: '#fff',
-            padding: 15,
-            borderRadius: 20,
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            marginBottom: 20
+        <View
+            style={{
+                width: '50%',
+                padding: 7,
+                boxSizing: 'border-box',
+            }}
+        >
 
 
-        }}>
-            <View style={{
-                flexDirection: 'row',
-                alignItems: 'center',
-                flexWrap: 'wrap'
+            <View
+                style={{
+                    backgroundColor: '#fff',
+                    padding: 15,
+                    borderRadius: 20,
+                    height: 150,
+                    flexDirection: 'coloum',
+                    justifyContent: 'space-between',
+                    // flexWrap: 'wrap',
+                    marginBottom: 20,
+                }}
+            >
+                <Text
+                    style={{
+                        textDecorationLine: completed ? 'line-through' : 'none',
+                        fontSize: 20,
+                        fontWeight: 'bold',
+                        justifyContent: 'center',
+                        
+                    }}
+                >
+                    {task}
+                </Text>
 
-            }}>
-                <TouchableOpacity style={{
-                    width: 30,
-                    height: 30,
-                    backgroundColor: completed ? '#328551':'#122f2b',
-                    opacity: 0.4,
-                    borderRadius: 10,
-                    marginRight: 10
-                }} onPress={onToggle}></TouchableOpacity>
+                <View
+                    style={{
+                        flexDirection: 'row',
+                        justifyContent: 'space-between',
+                        alignItems: 'center'
+                    }}
+                >
+                    <TouchableOpacity
+                        style={{
+                            width: 30,
+                            height: 30,
+                            backgroundColor: completed ? '#328551' : '#122f2b',
+                            opacity: 0.4,
+                            borderRadius: 10,
+                            marginRight: 10,
+                            alignItems:'center',
+                            justifyContent:'center'
+                        }}
+                        onPress={onToggle}
+                    ><Ionicons name="checkmark-done" size={24} color="black" /></TouchableOpacity>
+                    <TouchableOpacity onPress={onDelete}>
+                        <MaterialIcons name="delete" size={30} color="#328551" />
+                    </TouchableOpacity>
 
-                <Text style={{
-                    maxWidth: '80%',
-                    textDecorationLine: completed ? 'line-through' : 'none',
-                    fontSize: 30,
-                    fontWeight: 'bold',
 
-                }}>{task}</Text>
+                </View>
+
+
             </View>
-            <TouchableOpacity onPress={onDelete}>
-                <MaterialIcons name="delete" size={30} color="#328551" />
-            </TouchableOpacity>
+
 
         </View>
-    )
-}
+    );
+};
 
-export default Tasks
+export default Tasks;

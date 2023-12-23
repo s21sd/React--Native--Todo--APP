@@ -5,25 +5,23 @@ import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from './FirebaseAuth';
+import { auth1 } from './FirebaseAuth';
+
 const LoginScreen = ({ navigation }) => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const hadleLogin = () => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
 
+  const hadleLogin = () => {
+    signInWithEmailAndPassword(auth1, email, password)
+      .then((userCredential) => {
         const user = userCredential.user;
-        // console.log(user.email)
-        // alert("Login successful");
         ToastAndroid.show('Login successful', ToastAndroid.SHORT);
         navigation.navigate('MainScreen');
 
       })
-    // .catch((console.error()));
-
   }
+
 
   return (
     <SafeAreaView style={{ flex: 1, justifyContent: 'center' }}>

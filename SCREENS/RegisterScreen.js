@@ -5,7 +5,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from './FirebaseAuth';
+import { auth1 } from './FirebaseAuth';
 import { useState } from 'react'
 const RegisterScreen = ({ navigation }) => {
     const [name, setName] = useState('');
@@ -17,7 +17,7 @@ const RegisterScreen = ({ navigation }) => {
             alert("Passwords do not match");
             return;
         }
-        createUserWithEmailAndPassword(auth, email, password)
+        createUserWithEmailAndPassword(auth1, email, password)
             .then((userCredential) => {
 
                 const user = userCredential.user;
@@ -85,7 +85,7 @@ const RegisterScreen = ({ navigation }) => {
 
                 <View style={{ flexDirection: 'row', justifyContent: 'center', marginBottom: 20, marginTop: 30 }}>
                     <Text>Already, registered?</Text>
-                    <TouchableOpacity onPress={() => navigation.goBack()}>
+                    <TouchableOpacity onPress={() => navigation.navigate('LoginScreen')}>
                         <Text style={{ color: '#ffffff', fontWeight: '700' }}>  Login</Text>
                     </TouchableOpacity>
                 </View>

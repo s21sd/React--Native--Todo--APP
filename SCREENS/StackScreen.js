@@ -9,8 +9,14 @@ const StackScreen = () => {
     return (
         <Stack.Navigator>
 
-
-
+            <Stack.Screen
+                name="RegisterScreen"
+                component={RegisterScreen}
+                options={
+                    {
+                        headerShown: false,
+                    }
+                } />
             <Stack.Screen
                 name="LoginScreen"
                 component={LoginScreen}
@@ -20,15 +26,6 @@ const StackScreen = () => {
                     }
                 }
             />
-
-            <Stack.Screen
-                name="RegisterScreen"
-                component={RegisterScreen}
-                options={
-                    {
-                        headerShown: false,
-                    }
-                } />
             <Stack.Screen
                 name="MainScreen"
                 component={MainSrceen}
